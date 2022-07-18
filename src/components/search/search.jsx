@@ -11,7 +11,16 @@ const Search = ({ onSearchChange }) => {
       geoApiOptions
     )
       .then((response) => response.json())
-      .then((response) => console.log(response))
+      .then((response) => {
+        return {
+          options: response.data.map((cities) => {
+            return {
+              value: `${cities.latitude} ${cities.longitude}`,
+              label: `${cities.name} ${cities.countryCode}`,
+            };
+          }),
+        };
+      })
       .catch((err) => console.error(err));
   };
 
