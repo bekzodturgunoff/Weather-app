@@ -1,0 +1,22 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.daily-item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.421);
+  border-radius: 8px;
+}
